@@ -1,7 +1,7 @@
 
 # Python virtual environment
 meal/
-.env/
+key.env/
 
 # Dependency directories
 __pycache__/
