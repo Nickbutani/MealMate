@@ -1,0 +1,10 @@
+
+# Python virtual environment
+meal/
+.env/
+
+# Dependency directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}View Recipe{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <img src="{{ recipe.image_url }}" class="card-img-top" alt="Recipe Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <p class="card-text">Source: {{ recipe.source_name }}</p>
+                    <p class="card-text">Servings: {{ recipe.servings }}</p>
+                    <p class="card-text">Ingredients: </p>
+                    <ul>
+                        {% for ingredient in recipe.ingredients %}
+                            <li>{{ ingredient['title'] }} - {{ ingredient['quantity'] }} {{ ingredient['measure'] }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p class="card-text">Calories: {{ recipe.calories }}</p>
+                    <p class="card-text">Total Fat: {{ recipe.total_fat }}</p>
+                    <p class="card-text">Cholesterol: {{ recipe.cholesterol }}</p>
+                    <p class="card-text">Sodium: {{ recipe.sodium }}</p>
+                    <p class="card-text">Total Carbohydrates: {{ recipe.total_carbohydrates }}</p>
+                    <p class="card-text">Protein: {{ recipe.protein }}</p>
+                    <a href="{{ recipe.source_url }}" class="btn btn-primary">Source</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe.id) }}" class="btn btn-warning">Edit</a>
+                    <form action="{{ url_for('delete_recipe', recipe_id=recipe.id) }}" method="POST" style="display: inline;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this recipe?')">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

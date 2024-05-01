@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="head1">
+        <h1>Simple recipe for your better, healthy everyday! </h1>
+    </div>
+           
+    <div class="categories"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://previews.123rf.com/images/anaumenko/anaumenko1604/anaumenko160400216/56078847-traditional-american-breakfast-white-background-copy-space.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Breakfast</h5>
+                        <p class="card-text">Start your day with a healthy breakfast. </p>
+                        <a href="{{ url_for('get_recipes', mealType='Breakfast') }}" class="btn btn-primary">View Recipes</a>
+                    </div>  
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://media.istockphoto.com/id/1321195603/photo/people-having-balanced-diet-from-lunch-boxes.jpg?s=612x612&w=0&k=20&c=yieHclin0zByT8mXbK1x7dlf_4bG6yqeBRszUjyYBbc=" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lunch</h5>
+                        <p class="card-text">Healthy lunch ideas for you. </p>
+                        <a href="{{ url_for('get_recipes', mealType='Lunch') }}" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://media.istockphoto.com/id/1283716743/photo/family-enjoying-dinner-above-view.jpg?s=612x612&w=0&k=20&c=y_sZoY0PStw7AjaNJQtdE2HTQE7nTPpzOrbsTcIthNQ=" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dinner</h5>
+                        <p class="card-text">Healthy dinner ideas for you. </p>
+                        <a href="{{ url_for('get_recipes', mealType='Dinner') }}" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/298217/pexels-photo-298217.jpeg?cs=srgb&dl=pexels-leigh-patrick-14477-298217.jpg&fm=jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Snacks</h5>
+                        <p class="card-text">Healthy snacks ideas for you. </p>
+                        <a href="{{ url_for('get_recipes', mealType='snacks') }}" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr68eNtQwVo1WXxv-MVxQYx1sNovM2v-aok6OTXLD3Ng&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Desserts</h5>
+                        <p class="card-text">Healthy dessert ideas for you. </p>
+                        <a href="{{ url_for('get_recipes_', dishType='Desserts') }}" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/fresh-cocktails-with-ice-lemon-lime-fruits-generative-ai_188544-12370.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1714262400&semt=ais" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Drinks</h5>
+                        <p class="card-text">Healthy drink ideas for you. </p>
+                        <a href="{{ url_for('get_recipes_', dishType='Drinks') }}" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="Your-Recipe">
+        <h1> Your Recipe</h1>
+        <div class="container">
+            <div class="row">
+                {% for recipe in user.recipes %}
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="{{ recipe.image_url }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ recipe.title }}</h5>
+                                <p class="card-text">{{ recipe.source_name }}</p>
+                                <a href="{{ recipe.source_url }}" class="btn btn-primary">Source</a>
+                                <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}" class="btn btn-success">View</a>
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe.id) }}" class="btn btn-warning">Edit</a>
+                
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+           <a href="{{ url_for('create_recipe') }}" class="btn btn-primary">Add Recipe</a>
+        </div>
+
+
+    </div>
+
+  
+   
+{% endblock %}

@@ -1,0 +1,74 @@
+            +--------------+   1     M   +-----------------------+
+            |    User      |-------------|   Recipe              |
+            +--------------+             +-----------------------+
+            | user_id (PK) |             | recipe_id (PK)        |
+            | username     |             | title                 |
+            | email        |             | image_url             |
+            | password     |             | source_name           |
+            +--------------+             | source_url            |
+                                         | servings              |
+                                         +-----------------------+
+                                                  |
+                                                  | 1     M
+                                                  |
+                                                  V
+             +--------------+                +-----------------------+
+             |    User_Recipe|               |   Recipe_Ingredient   |
+             +--------------+                +-----------------------+
+             | user_id (FK)  |               | recipe_id (FK)        |
+             | recipe_id (FK)|               | ingredient_id (FK)    |
+             +--------------+                | quantity              |
+                                             | measure               |
+                                             +-----------------------+
+
+
+-- Table: User
+CREATE TABLE User (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Table: Recipe
+CREATE TABLE Recipe (
+    recipe_id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    image_url VARCHAR(255),
+    source_name VARCHAR(255),
+    source_url VARCHAR(255),
+    servings INT
+);
+
+-- Table: User_Recipe
+CREATE TABLE User_Recipe (
+    user_id INT REFERENCES User(user_id),
+    recipe_id INT REFERENCES Recipe(recipe_id),
+    PRIMARY KEY (user_id, recipe_id)
+);
+
+-- Table: Ingredient
+CREATE TABLE Ingredient (
+    ingredient_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+-- Table: Recipe_Ingredient
+CREATE TABLE Recipe_Ingredient (
+    recipe_id INT REFERENCES Recipe(recipe_id),
+    ingredient_id INT REFERENCES Ingredient(ingredient_id),
+    quantity FLOAT,
+    measure VARCHAR(50),
+    PRIMARY KEY (recipe_id, ingredient_id)
+);
+
+-- Table: Nutritional_Info
+CREATE TABLE Nutritional_Info (
+    ingredient_id INT PRIMARY KEY REFERENCES Ingredient(ingredient_id),
+    calories FLOAT,
+    total_fat FLOAT,
+    cholesterol FLOAT,
+    sodium FLOAT,
+    total_carbohydrates FLOAT,
+    protein FLOAT
+);

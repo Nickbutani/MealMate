@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Recipe{% endblock %}
+
+{% block content %}
+    <h1>Recipe</h1>
+    <div id="recipe-container">
+        {% for recipe in recipes %}
+        <div class="recipe">
+            <h2>{{ recipe.recipe.label }}</h2>
+            <img src="{{ recipe.recipe.image }}" alt="{{ recipe.recipe.label }}">
+            <div class="ingredients-container">
+                <h3>Ingredients</h3>
+                <ul>
+                    {% for ingredient in recipe.recipe.ingredients %}
+                        <li>
+                            <div class="ingredient">
+                                <div class="ingredient-image">
+                                    <img src="{{ ingredient.image }}" alt="{{ ingredient.food }}">
+                                </div>
+                                <div class="ingredient-details">
+                                    <p>{{ ingredient.food }}</p>
+                                    <p><em>{{ ingredient.text }}</em></p>
+                                    <p>Weight: {{ ingredient.weight }} grams</p>
+                                    <p>Category: {{ ingredient.foodCategory }}</p>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <p>Calories: {{ recipe.recipe.calories }}</p>
+            <p>Servings: {{ recipe.recipe.yield }}</p>
+            <p>Link: <a href="{{ recipe.recipe.url }}" target="_blank">View Recipe</a></p>
+        </div>
+        {% endfor %}
+    </div>
+
+    
+{% endblock %}

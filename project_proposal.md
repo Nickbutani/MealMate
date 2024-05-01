@@ -1,0 +1,25 @@
+# Project Proposal
+
+## Get Started
+
+|            | Description                                                                                                                                                                                                                                                                                                                                              | Fill in |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Tech Stack | Backend: Python/Flask, PostgreSQL, SQLAlchemy Frontend: JavaScript, HTML, CSS, Jinja Deployment: Heroku APIs: RESTful APIs                              |         |
+| Type       | This project will be a web-based application.                                                                                                                                                                                                                                                                                                    |         |
+| Goal       | The goal of this project is to create a web application that provides users with a platform to share and discover book recommendations. Users will be able to create accounts, log in, browse book recommendations, submit their own recommendations, and interact with other users by liking, commenting on, and saving recommendations.                                                                                                                                                                                                                                                                                                      |         |
+| Users      | The target users of this application are book enthusiasts and readers of all ages and backgrounds who are interested in discovering new books across various genres. The demographic will likely include avid readers, book club members, and individuals looking for personalized book recommendations.                                                                                                                                                                                                                                                           |         |
+| Data       | For this project, I plan to use data sourced from various sources, including public book APIs such as Google Books API or Goodreads API, as well as user-generated content. The data will include book titles, authors, genres, summaries, user reviews, ratings, and metadata. I may also create a custom database to store user information, book recommendations, user interactions, and authentication details.                                                                                                                                                                                                                                                           |         |
+
+# Breaking down My project
+
+
+| Task Name                   | Description                                                                                                   | Example                                                           |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Design Database schema      | Determine the models and database schema required for your project.                                           | [Link](https://dbdiagram.io/d/6629c25503593b6b61e81a88) |
+| Source Your Data            | Data Coming from Edamam API          | [Link](https://developer.edamam.com/edamam-docs-recipe-api) |
+| User Flows                  | Determine user flow(s) - think about what you want a user’s experience to be like as they navigate your site. | [Link](https://github.com/hatchways-community/capstone-project-one-5d3459f7731b43b3a15ef62527f70612/issues/1) |
+| Set up backend and database | Configure the environmental variables on your framework of choice for development and set up database.        | [Link](https://github.com/hatchways-community/capstone-project-one-5d3459f7731b43b3a15ef62527f70612/issues/24) |
+| Set up frontend             | Set up frontend framework of choice and link it to the backend with a simple API call for example.            | [Link](https://github.com/hatchways-community/capstone-project-one-5d3459f7731b43b3a15ef62527f70612/issues/3) |
+| User Authentication         | Fullstack feature - ability to authenticate (login and sign up) as a user                                     | [Link](hhttps://github.com/hatchways-community/capstone-project-one-5d3459f7731b43b3a15ef62527f70612/issues/4) |
+
+

@@ -1,0 +1,9 @@
+
+
+## **Project Idea**
+
+**MedBuddy:** App where patients can login, save their medication info, search for doctor, search for new medication, keep track on medication, search for any nearby hospital or pharmacy. This app will help patients to remember when the next refill is and give directions to pharmacy. API can be used it Google place API, BetterDoctor, DailyMed. 
+
+**Vehicle Diagnostic and Troubleshooting Assistant:** Build a diagnostic tool that helps car owners identify and troubleshoot common vehicle issues without the need for professional assistance. Integrate the OBD-II API to access real-time vehicle data and diagnostic information from the car's onboard diagnostics system. Users can connect their vehicle to the application using an OBD-II adapter and receive insights into their vehicle's health, including engine diagnostics, fuel efficiency, and maintenance alerts. The application can provide actionable recommendations for resolving issues and connecting users with nearby auto repair shops or service centers for further assistance. 
+
+**Recipe Recommendation and Meal Planning App:** Develop a mobile application that provides personalized recipe recommendations and assists users in meal planning based on their dietary preferences, restrictions, and ingredient availability. Utilize the Edamam API's free tier to access a vast database of recipes, nutritional information, and ingredient details. Users can input their dietary preferences, allergies, and available ingredients, and the application will suggest recipes that match their criteria. The app can generate shopping lists based on selected recipes, provide nutritional information for meals, and offer cooking tips and techniques. 
