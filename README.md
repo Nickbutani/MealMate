@@ -55,5 +55,6 @@ Upon accessing the application, you will be able to generate recipes based on yo
 
 Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
 
-## Deployed 
+## Deployed
 
+The application is deployed and can be accessed at [https://mealmate-447u.onrender.com](https://mealmate-447u.onrender.com).
