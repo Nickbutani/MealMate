@@ -38,6 +38,7 @@ pure-eval==0.2.2
 pycparser==2.22
 Pygments==2.17.2
 python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
 simplegeneric==0.8.1
 six==1.16.0
 soupsieve==2.5
