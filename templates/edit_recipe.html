@@ -2,92 +2,133 @@
 {% block title %}Edit Recipe{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <h2>Edit Recipe</h2>
+
+<div class="res-form">
+    
+        <div class="form-div-res">
+
             <form method="POST">
-                {{ form.hidden_tag() }}
-                <div class="form-group">
-                    {{ form.title.label }}: {{ form.title() }}
-                </div>
-                <div class="form-group">
-                    {{ form.image_url.label }}: {{ form.image_url() }}
-                </div>
-                <div class="form-group">
-                    {{ form.source_name.label }}: {{ form.source_name() }}
-                </div>
-                <div class="form-group">
-                    {{ form.source_url.label }}: {{ form.source_url() }}
-                </div>
-                <div class="form-group">
-                    {{ form.servings.label }}: {{ form.servings() }}
-                </div>
-                <div class="form-group">
-                    <div id="ingredients">
-                        <h4>Ingredients</h4>
-                        {% for ingredient_form in form.ingredients %}
-                            <div class="ingredient">
-                                {{ ingredient_form.title.label }}: {{ ingredient_form.title }}
-                                {{ ingredient_form.quantity.label }}: {{ ingredient_form.quantity }}
-                                {{ ingredient_form.measure.label }}: {{ ingredient_form.measure}}
-                                <button type="button" class="btn btn-danger btn-sm delete-ingredient">Delete</button>
+                <div class="form-info-main">
+                    <div class="form-info-div">
+                        <h4> RECIPE GENRAL INFORMATION</h4>
+                        <div class="form-info-div2">
+                            {{ form.hidden_tag() }}
+
+                            <div class="form-div">
+                                {{ form.title.label }} {{ form.title() }}
                             </div>
-                        {% endfor %}
+                            <div class="form-div">
+                                {{ form.image_url.label }} {{ form.image_url() }}
+                            </div>
+                            <div class="form-div">
+                                {{ form.source_name.label }} {{ form.source_name() }}
+                            </div>
+                            <div class="form-div">
+                                {{ form.source_url.label }} {{ form.source_url() }}
+                            </div>
+                            <div class="form-div">
+                                {{ form.servings.label }} {{ form.servings() }}
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" id="add-ingredient">Add Ingredient</button>
+
+                    <div class="res-detail"">
+                        <h4>RECIPE DETAILS</h4>
+                        <div class="form-ingre-div">
+                            <div id="ingredients2">
+                                <h4>Ingredients</h4>
+                                {% for ingredient_form in form.ingredients %}
+                                    <div class="ingredient2">
+                                        <div class="form-div2">
+                                            {{ ingredient_form.quantity.label }} {{ ingredient_form.quantity }}
+                                            </div>
+                                        <div class="form-div2">
+                                            {{ ingredient_form.measure.label }} {{ ingredient_form.measure}}
+                                        </div>
+                                        <div class="form-div2">
+                                                {{ ingredient_form.title.label }} {{ ingredient_form.title }}
+                                        </div>
+                                       
+                                        <button type="button" class="btn  btn-sm delete-ingredient"><i class="fa-solid fa-trash-can"></i></button>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <button type="button" id="add-ingredient">Add Ingredient</button>
+                        </div>
+                    
+                
+                    
+                        <div class="res-serving">
+                            <h3>NUTRITION INFORMATION</h3>
+                            <div class="res-serving-inner">
+                                <div class="form-div3">
+                                    {{ form.calories() }} {{ form.calories.label }} 
+                                </div>
+                                <div class="form-div3">
+                                    {{ form.total_fat() }}{{ form.total_fat.label }} 
+                                </div>
+                                <div class="form-div3">
+                                    {{ form.cholesterol() }}  {{ form.cholesterol.label }} 
+                                </div>
+                                <div class="form-div3">
+                                    {{ form.sodium() }}  {{ form.sodium.label }} 
+                                </div>
+                                <div class="form-div3">
+                                    {{ form.total_carbohydrates() }}  {{ form.total_carbohydrates.label }} 
+                                </div>
+                                <div class="form-div3">
+                                    {{ form.protein() }}  {{ form.protein.label }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                  
                 </div>
-                <div class="form-group">
-                    {{ form.calories.label }}: {{ form.calories() }}
+                <div class="serving-btn">
+                    <button type="submit" class="btn">Update Recipe</button>
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}" class="btn">Cancel</a>
                 </div>
-                <div class="form-group">
-                    {{ form.total_fat.label }}: {{ form.total_fat() }}
-                </div>
-                <div class="form-group">
-                    {{ form.cholesterol.label }}: {{ form.cholesterol() }}
-                </div>
-                <div class="form-group">
-                    {{ form.sodium.label }}: {{ form.sodium() }}
-                </div>
-                <div class="form-group">
-                    {{ form.total_carbohydrates.label }}: {{ form.total_carbohydrates() }}
-                </div>
-                <div class="form-group">
-                    {{ form.protein.label }}: {{ form.protein() }}
-                </div>
-                <button type="submit" class="btn btn-primary">Update Recipe</button>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}" class="btn btn-secondary">Cancel</a>
             </form>
+            
         </div>
-    </div>
+    
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('add-ingredient').addEventListener('click', function() {
-            const ingredientsDiv = document.getElementById('ingredients');
-            const ingredientCount = ingredientsDiv.children.length;
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('add-ingredient').addEventListener('click', function() {
+        const ingredientsDiv = document.getElementById('ingredients2');
+        const ingredientCount = ingredientsDiv.children.length;
 
-            const ingredientDiv = document.createElement('div');
-            ingredientDiv.classList.add('ingredient');
-            ingredientDiv.innerHTML = `
-                <label for="ingredients-${ingredientCount}-title">Title:</label>
-                <input type="text" name="ingredients-${ingredientCount}-title">
-                <label for="ingredients-${ingredientCount}-quantity">Quantity:</label>
+        const ingredientDiv = document.createElement('div');
+        ingredientDiv.classList.add('ingredient2'); 
+
+        
+        ingredientDiv.innerHTML = `
+            <div class="form-div2">
+                <label for="ingredients2-${ingredientCount}-quantity">Quantity:</label>
                 <input type="text" name="ingredients-${ingredientCount}-quantity">
-                <label for="ingredients-${ingredientCount}-measure">Measure:</label>
+            </div>
+            <div class="form-div2">
+                <label for="ingredients2-${ingredientCount}-measure">Measure:</label>
                 <input type="text" name="ingredients-${ingredientCount}-measure">
-                <button type="button" class="delete-ingredient">Delete</button>
-            `;
-            ingredientsDiv.appendChild(ingredientDiv);
-        });
-
-        document.addEventListener('click', function(event) {
-            if (event.target.classList.contains('delete-ingredient')) {
-                const ingredientDiv = event.target.parentElement;
-                ingredientDiv.remove();
-            }
-        });
+            </div>
+            <div class="form-div2">
+                <label for="ingredients2-${ingredientCount}-title">Title:</label>
+                <input type="text" name="ingredients-${ingredientCount}-title">
+            </div>
+            <button type="button" class="btn btn-sm delete-ingredient"><i class="fa-solid fa-trash-can"></i></button>
+        `;
+        ingredientsDiv.appendChild(ingredientDiv);
     });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-ingredient')) {
+            const ingredientDiv = event.target.parentElement;
+            ingredientDiv.remove();
+        }
+    });
+});
 </script>
 {% endblock %}

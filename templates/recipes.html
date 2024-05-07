@@ -3,35 +3,44 @@
 {% block title %}Recipe{% endblock %}
 
 {% block content %}
-    <h1>Recipe</h1>
+    <div class="recipe-page-head">
+        <h3>Embark on a gastronomic adventure as your chosen recipes come to life, readily accessible and awaiting your culinary mastery at the tap of your fingertip.</h3>
+    </div>
     <div id="recipe-container">
         {% for recipe in recipes %}
-        <div class="recipe">
-            <h2>{{ recipe.recipe.label }}</h2>
+
+        <div class="recipe-div1">
             <img src="{{ recipe.recipe.image }}" alt="{{ recipe.recipe.label }}">
-            <div class="ingredients-container">
-                <h3>Ingredients</h3>
-                <ul>
-                    {% for ingredient in recipe.recipe.ingredients %}
-                        <li>
-                            <div class="ingredient">
-                                <div class="ingredient-image">
-                                    <img src="{{ ingredient.image }}" alt="{{ ingredient.food }}">
-                                </div>
-                                <div class="ingredient-details">
-                                    <p>{{ ingredient.food }}</p>
-                                    <p><em>{{ ingredient.text }}</em></p>
-                                    <p>Weight: {{ ingredient.weight }} grams</p>
-                                    <p>Category: {{ ingredient.foodCategory }}</p>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <div class="recipe">
+                <div class="ingredients-container">
+                    <h2>{{ recipe.recipe.label }}</h2>
+                    <div class="recipe-ingre">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            {% for ingredient in recipe.recipe.ingredients %}
+                                <li>
+                                    <div class="ingredient">
+                                        <div class="ingredient-image">
+                                            <img src="{{ ingredient.image }}" alt="{{ ingredient.food }}">
+                                        </div>
+                                        <div class="ingredient-details">
+                                            <p>{{ ingredient.food }}</p>
+                                            <p><em>{{ ingredient.text }}</em></p>
+                                            <p>Weight: {{ ingredient.weight }} grams</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="cal-serv">
+                        <p>Calories: {{ recipe.recipe.calories }}</p>
+                        <p>Servings: {{ recipe.recipe.yield }}</p>
+                        <p>Link: <a href="{{ recipe.recipe.url }}" target="_blank">View Recipe</a></p>
+                    </div>
+                </div>
+            
             </div>
-            <p>Calories: {{ recipe.recipe.calories }}</p>
-            <p>Servings: {{ recipe.recipe.yield }}</p>
-            <p>Link: <a href="{{ recipe.recipe.url }}" target="_blank">View Recipe</a></p>
         </div>
         {% endfor %}
     </div>

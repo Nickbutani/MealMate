@@ -1,0 +1,1060 @@
+body{
+    
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+header{
+    position: sticky;
+}
+
+#nav{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    height: 90px;
+    width: 100%;
+    justify-content: space-between;
+    position: sticky;
+}
+
+/* nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    
+/* } */
+
+nav a:hover{
+    color: #000;
+} 
+
+#navbarNav{
+    width: auto;
+    font-size: 1.6rem;
+}
+
+#navbarNav a{
+    color: #626262;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#navbarNav a:hover{
+    color: #000;
+}
+
+.navbar-brand img{
+    width: 100px;
+    height: 100px;
+  
+}
+
+.nav-b {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 15rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+}
+
+#signup{
+    color: #000;
+    border: 1px solid #57de3c;
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #57de3c;
+    border-right: 1px solid #57de3c;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#signup:hover{
+    background-color: #92fe83;
+   
+}
+
+#login{
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+#navbarNav2{
+    gap: 50px;
+}
+
+
+.banner{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.banner img{
+    width: 750px;
+    height: 450px;
+    margin-right: 0;
+}
+
+.banner h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    
+    text-align:left;
+    
+}
+
+.banner-span1{
+    white-space: nowrap;
+}
+
+.banner-span2{
+    background-color: rgba(127, 255, 212, 0.6);
+    padding: 0.7rem;
+    padding-left: 5px;
+    flex-wrap: wrap;
+}
+
+.banner-words{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 90px;
+}
+
+.banner-p{
+    color: rgb(112, 109, 109);
+    margin-top: 20px;
+}
+
+.banner-words a{
+    color: #555655;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding:0;
+    margin-top: 10px;
+}
+
+/* login page */
+
+.quote{
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+}
+
+.quote span{
+    text-align: end;
+    margin-right: 90px;
+}
+
+.login-page-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.login-picform{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   width: 100%;
+}
+.login-banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-banner img{
+    width: 750px;
+    height: 450px;
+    margin-right: 0;
+}
+
+.login-form{
+    font-family: "Chakra Petch", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.login-form h1{
+    font-size: 2.5rem;
+    margin-top: 10px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form-group{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-form label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.login-form input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form button{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #57de3c;
+    background-color: #57de3c;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-form button:hover{
+    border: none;
+    color: #000;
+    background-color: #468b3c;
+}
+
+/* sign up */
+
+.signup-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 750px;
+}
+
+.signup-banner img{
+    width: 750px;
+    height: 450px;
+    margin-right: 0;
+}
+
+.signup-page-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.signup-picform{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-form{
+    font-family: "Chakra Petch", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.signup-form h1{
+    font-size: 2.5rem;
+    margin-top: 10px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.signup-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.signup-form label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.signup-form input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* user home */
+
+.head1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 20px;
+}
+
+.fa-angles-down{
+    font-size: 2rem;
+    color: #92ea80;
+}
+
+#res{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 11rem;
+}
+
+#recipe-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.recipe-left{
+    display: flex;
+    float: left;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-right: 20px;
+}
+
+.recipe-right{
+    display: flex;
+    float: right;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-right: 20px;
+}
+
+.recipe-left img{
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.recipe-right img{
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+}   
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-body a{
+    background-color: rgba(127, 255, 212, 0.6);
+    color: #000;
+    border:  rgba(127, 255, 212, 0.6);;
+
+}
+
+.card-body a:hover{
+    background-color: #92fe83;
+    color: #000;
+}
+
+/* user recipe */
+
+.Your-Recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 20px;
+}
+
+.user-res-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+}
+
+.user-res-head a{
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 3px 10px;
+    border: 1px solid #000;
+
+}
+
+.user-res-head a:hover{
+    background-color: #000000;
+    color: #fff;
+}
+
+
+.your-res-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+}
+
+.user-res-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-left: 60px;
+    padding: 2rem;
+
+}
+
+.user-card-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 90px;
+}   
+
+
+.user-res-card img{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.user-res-edit a:hover{
+    background-color: #717171;
+    color: #fff;
+
+}
+
+
+/* recipe page */
+
+.recipe-page-head{
+    font-family: "Chakra Petch", sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left:20px;
+}
+
+#recipe-container{
+    display: flex;
+    flex-direction: column;
+    font-family: "Chakra Petch", sans-serif;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.recipe-div1{
+    display: flex;
+
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.recipe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+.recipe-div1 img{
+    width: 500px;
+    height: 400px;
+    border-radius: 20px;
+}   
+
+.ingredient{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+.ingredient img{
+    width: 80px;
+    height: 90px;
+    border-radius: 20px;
+}
+
+.recipe-ingre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.recipe-ingre ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    flex-wrap: wrap;
+}
+
+.recipe-ingre li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+/* meal planner page */
+
+.meal-plan-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 100%;
+
+}
+
+.meal-plan-img img{
+    width: 750px;
+    height: 450px;
+    border-radius: 20px;
+  
+}
+
+.meal-plan-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 700px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.form-meal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    height: 600px;
+}
+
+.form-meal form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.form-meal form label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-meal form input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-meal form button{
+   width: 100%;
+   background-color: #57de3c;
+   margin: 0;
+}
+
+.form-meal form button:hover{
+    background-color: #72b568;
+}
+
+
+/* recipe form */
+.res-form{
+   
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.form-div-res{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    
+    padding: 2rem;
+}
+
+.form-div-res form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.res-info{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+.res-detail{
+    width: 100%  ;
+}
+
+.res-detail h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.form-ingre-div{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: auto;
+    padding: 2rem;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+#add-ingredient{
+    padding:0.5rem;
+    background-color: #fff;
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #57de3c;
+    border-right: 1px solid #57de3c;
+    border: 1px solid #57de3c;
+}
+
+#add-ingredient:hover{
+    background-color: #92fe83;
+}
+
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.form-div input{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-info-main{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+
+.form-info-div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+}
+.form-info-div h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+#ingredients2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  
+}
+
+#ingredients2 h4{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.ingredient2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 5px;
+
+}
+
+
+
+.res-serving{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.res-serving h3{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.res-serving-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form-div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #000000;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 15%;
+    font-weight: 500;
+    background: rgb(174,238,207, 0.5);
+    
+}
+
+.form-div3 input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    border: none;
+    opacity: 0.4;
+    font-weight: 700;
+}
+
+.form-info-div2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    gap:20px;
+}
+
+.form-div2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    gap: 10px;
+}
+
+.form-div2 input{
+    width: 10rem;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+
+.serving-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: auto;
+    
+}
+
+.serving-btn button{
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border: 1px solid #ffffff;
+    font-weight: 500;
+}
+
+.serving-btn button:hover{
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #57de3c;
+    border-right: 1px solid #57de3c;
+    border: 1px solid #57de3c;
+    background-color: #92fe83;
+}
+
+.serving-btn a{
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #0c0c0c;
+    border-right: 1px solid #0c0e0c;
+    border: 1px solid #020302;
+}
+
+.serving-btn a:hover{
+    background-color: #000000;
+    color: #fff;
+}
+
+/* meal plan */
+
+.h1-meal-plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.meal-plan-div{
+    display: flex;
+    flex-direction: column;
+   
+
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    
+    width: 100%;
+}
+
+
+.meal-plans-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.meal-plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    font-family: "Chakra Petch", sans-serif;
+
+}
+
+.meal-plan img{
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.meal-plan h2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.meal-plan-h2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.meal-plan-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.nutrient-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.bck-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    font-family: "Chakra Petch", sans-serif;
+    
+}
+
+.bck-btn a{
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border: 1px solid #ffffff;
+    font-weight: 500;
+}
+
+.bck-btn a:hover{
+    border-radius: 20px; /* Adjust the value as needed */
+    border-left:  1px solid #57de3c;
+    border-right: 1px solid #57de3c;
+    border: 1px solid #57de3c;
+    background-color: #92fe83;
+}

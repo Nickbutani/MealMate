@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="banner">
+            <div class="banner-words">
+                <h1 class="banner-h1">
+                    <span class="banner-span1">Every Flavor,</span>
+                    <br>
+                    <span>A Delicate</span>
+                <span class="banner-span2">Sensation</span>
+                </h1>
+                <p class="banner-p">
+                    Explore a world of recipes and effortlessly plan your meals with our intuitive platform, designed to simplify your culinary journey.
+                </p>
+                <a href="{{ url_for('login_user') }}" class="btn ">Explore <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <img src="{{ url_for('static', filename='banner.png') }}" class="img-fluid" alt="Home">
+        </div>
+    </div>
+{% endblock %}

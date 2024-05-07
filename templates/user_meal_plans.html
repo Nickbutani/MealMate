@@ -5,28 +5,33 @@
 {% block title %}Meal Planner{% endblock %}
 
 {% block content %}
-    <div class="h1">
+    <div class="h1-meal-plan">
         Your Meal Plan, for a better start of the day!
     </div>
 
-    <div class="container">
-        <h1>Meal Plan</h1>
-        <div class="meal-plan-details">
-            <h2>Meal Plan Nutrients</h2>
+    <div class="meal-plan-div">
+       <div class="meal-plans-container">
+            {% for mealPlan in meals %}
+                <div class="meal-plan">
+                    <img src="{{ mealPlan.image }}" alt="{{ mealPlan.title }}">
+                    <h2 class="meal-plan-h2">
+                        {{ mealPlan.title }} 
+                        <a href="{{ mealPlan.sourceUrl }}">Let me Chop</a>
+                    </h2>
+                </div>
+            {% endfor %}
+       </div>
+       <div class="meal-plan-details">
+        <h2>Meal Plan Nutrients</h2>
+        <div class="nutrient-div">
             <p>Calories: {% if nutrients.calories %} {{ nutrients.calories }} {% else %} N/A {% endif %}</p>
             <p>Protein: {% if nutrients.protein %} {{ nutrients.protein }} {% else %} N/A {% endif %}</p>
             <p>Fat: {% if nutrients.fat %} {{ nutrients.fat }} {% else %} N/A {% endif %}</p>
             <p>Carbohydrates: {% if nutrients.carbohydrates %} {{ nutrients.carbohydrates }} {% else %} N/A {% endif %}</p>
         </div>
-       <div class="meal-plans-container">
-            {% for mealPlan in meals %}
-                <div class="meal-plan">
-                    <img src="{{ mealPlan.image }}" alt="{{ mealPlan.title }}">
-                    <h2>{{ mealPlan.title }} 
-                        <a href="{{ mealPlan.sourceUrl }}">View</a>
-                    </h2>
-                </div>
-            {% endfor %}
-       </div>
     </div>
+    <div class="bck-btn">
+        <a href="{{ url_for('meal_plan') }}" class="btn">Back to Meal Planner</a>
+    </div>
+   
 {% endblock %}

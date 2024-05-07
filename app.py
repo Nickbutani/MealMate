@@ -23,7 +23,7 @@ connect_db(app)
 @app.route('/')
 def home():
     user = session.get('user_id')
-    return render_template('base.html', user=user)
+    return render_template('home.html', user=user)
 
 
 @app.route('/search-recipes', methods=['GET'])
@@ -203,9 +203,9 @@ def meal_plan():
 @app.route('/meal_plan', methods=['POST'])
 def meal_plan_post():
     user = session.get('user_id')
-    if 'user_id' not in session:
+    if 'user_id' in session:
         form = MealPlanForm()
-        if form.validate_on_submit():
+        if request.method == 'POST':
             timeFrame = form.timeFrame.data
             targetCalories = form.targetCalories.data
             diet = form.diet.data
@@ -351,8 +351,9 @@ def edit_recipe(recipe_id):
         recipe.ingredients = ingredients
 
         db.session.commit()
+        user = session.get('user_id')
         flash('Recipe updated successfully.', 'success')
-        return redirect(url_for('view_recipe', recipe_id=recipe.id), user=user)
+        return redirect(url_for('view_recipe', recipe_id=recipe.id))
     
     else:
         return render_template('edit_recipe.html', form=form, recipe=recipe)

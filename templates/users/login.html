@@ -4,23 +4,42 @@
 
 
 {% block content %}
-    <h1>Login</h1>
-    <form method="POST">
-        {{ form.hidden_tag() }}
-        <div class="form-group">
-            {{ form.username.label }}
-            {{ form.username(class="form-control") }}
-            {% for error in form.username.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
+
+    <div class="container-fluid">
+    
+        <div class="login-page-div">
+            <div class="login-picform">
+                <div class="login-banner">
+                    <img src="{{ url_for('static', filename='login.png') }}" class="img-fluid" alt="Home">
+                </div>
+                <div class="login-form">
+                    <h1>Login</h1>
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ form.username.label }}
+                            {{ form.username(class="form-control") }}
+                            {% for error in form.username.errors %}
+                                <span class="text-danger">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.password.label }}
+                            {{ form.password(class="form-control") }}
+                            {% for error in form.password.errors %}
+                                <span class="text-danger">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+            <h3 class="quote">
+                "Cooking is like love. It should be entered into with abandon or not at all."</span>
+                <br>
+                <span>- Harriet Van Horne </span>
+            </h3>
         </div>
-        <div class="form-group">
-            {{ form.password.label }}
-            {{ form.password(class="form-control") }}
-            {% for error in form.password.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+    </div>
+  
 {% endblock %}
